@@ -11,16 +11,16 @@ function clickHandler(){
     console.log("input", txtInput.value)
 };
 */
-function getTranslationURL(text){
+function getTranslationURL(text) {
     return serverURL + "?" + "text=" + text
 }
 
-function errorHandler(error){
+function errorHandler(error) {
     console.log("error occured", error);
     alert("something wrong with server! try again after some time")
 }
 
-function clickHandler(){
+function clickHandler() {
     var inputText = txtInput.value // taking input
 
     //calling server for processing 
@@ -29,7 +29,7 @@ function clickHandler(){
         .then(json => {
             var translatedText = json.contents.translated;
             outputDiv.innerText = translatedText;
-           })
+        })
         .catch(errorHandler)
 };
 
