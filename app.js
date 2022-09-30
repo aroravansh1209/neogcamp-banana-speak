@@ -4,13 +4,6 @@ var outputDiv = document.querySelector("#output");
 
 var serverURL = "https://api.funtranslations.com/translate/minion.json";
 
-/*console.log(txtInput)
-
-function clickHandler(){
-    console.log("clicked!");
-    console.log("input", txtInput.value)
-};
-*/
 function getTranslationURL(text) {
   return serverURL + "?" + "text=" + text;
 }
